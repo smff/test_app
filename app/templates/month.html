@@ -1,0 +1,26 @@
+
+
+<ul class="change_month_menu">
+	<li class="change_month" ng-click="prevMonth()">Prev Month</li>
+	<li class="date">{{showMonthName(CurrentMonth)}} {{CurrentYear}}
+	<li class="change_month" ng-click="nextMonth()"> Next Month</li>
+</ul>
+
+<table border="1" class="month_table">
+	<tr class="day_name">
+		<td ng-repeat="dayname in DayNames">{{dayname}}</td>
+	</tr>
+	<tr ng-repeat="week in month">
+		<td ng-repeat="day in week" ng-class="{current_month: day.is_current_month}">
+			<span class="date_day">{{day.date}}</span>
+			<span ng-click="addTask(day.dayCode)" class="add_task">(+)</span>
+
+			<ul>
+				<li ng-repeat="task in day.tasks"><span ng-click="removeTask(task.task_id);" class="remove_task">-</span>
+					{{task.task_text}}
+				</li>
+			</ul>
+
+		</td>
+	</tr>
+</table>

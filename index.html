@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="node_modules/angular/angular.js"></script>
+	<script src="node_modules/angular-route/angular-route.js"></script>
+	<script src="app/js/app.js"></script>
+	<script src="app/js/controllers.js"></script>
+	<script src="app/js/dataProvider.js"></script>
+	<link rel="stylesheet" type="text/css" href="app/css/style.css">
+</head>
+
+<body ng-app="calendarApp">
+	<!--may be use <ul> for this list of href?-->
+	<a ng-href="#/">Day</a>
+	<a ng-href="#/week">Week</a>
+	<a ng-href="#/month">Month</a>
+<!--never mind, just <br> and so on-->
+	<br>
+
+<!-- magic -->
+<ng-view></ng-view>
+
+</body>
+</html>

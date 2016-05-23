@@ -1,0 +1,80 @@
+/*just css style in scss notation*/
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+table.month_table {
+    border-spacing: 0;
+    border-collapse: separate;
+    width: 980px;
+    display: block;
+    margin: 0 auto;
+}
+
+table.month_table tr td {
+    width: 140px;
+    height: 140px;
+    border: 1px solid gray;
+    background-color: #F0F0F0;
+    vertical-align: top;
+    padding: 10px;
+}
+
+table.month_table tr td.current_month {
+    background-color: white;
+}
+
+table.month_table tr td span.date_day {
+    font-size: 40px;
+    line-height: 40px;
+    float: right;
+    display: block;
+    height: 40px;
+}
+
+table.month_table tr td ul {
+    list-style: none;
+}
+
+table.month_table tr td ul li {
+    list-style: none;
+}
+
+table.month_table tr td span.add_task,
+table.month_table tr td span.remove_task {
+    cursor: pointer;
+}
+
+table.month_table tr.day_name td {
+    text-align: center;
+    height: 40px;
+}
+
+ul.change_month_menu {
+    display: block;
+    list-style: none;
+    width: 410px;
+    margin: 20px auto;
+}
+
+ul.change_month_menu li {
+    display: inline-block;
+
+    text-align: center;
+}
+
+ul.change_month_menu li.date {
+    width: 200px;
+}
+
+ul.change_month_menu li.change_month {
+    width: 100px;
+    cursor: pointer;
+}
